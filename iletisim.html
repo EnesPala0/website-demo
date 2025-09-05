@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>İletişim - Şah Boya</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <a href="index.html"><img src="sahboya_logo.png" alt="Şah Boya" class="brand-logo"></a>
+      <span class="brand-text">Şah Boya</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav mx-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="urunler.html" role="button" id="productsMenu" data-bs-toggle="dropdown" aria-expanded="false">Ürünler</a>
+          <ul class="dropdown-menu" aria-labelledby="productsMenu">
+            <li><a class="dropdown-item" href="urunler.html?category=all">Tüm Ürünler</a></li>
+            <li><a class="dropdown-item" href="urunler.html?category=ic">İç Cephe</a></li>
+            <li><a class="dropdown-item" href="urunler.html?category=dis">Dış Cephe</a></li>
+            <li><a class="dropdown-item" href="urunler.html?category=astar">Astarlar</a></li>
+            <li><a class="dropdown-item" href="urunler.html?category=izolasyon">İzolasyonlar</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="boya-hesapla.html">Boya Hesapla</a></li>
+        <li class="nav-item"><a class="nav-link active" href="hakkinda.html">Hakkımızda</a></li>
+        <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+      </ul>
+      <div class="d-flex align-items-center">
+        <a class="btn btn-gradient me-2" href="iletisim.html">Teklif Al</a>
+        <a class="btn btn-outline-secondary" href="magazaBul.html">Mağaza Bul</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="contact-hero text-center py-5">
+  <div class="container">
+    <h1 class="fw-bold">Bizimle İletişime Geçin</h1>
+    <p class="text-muted">Sorularınız, önerileriniz veya teklif talepleriniz için formu doldurun ya da aşağıdaki bilgilerden bize ulaşın.</p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section py-5">
+  <div class="container">
+    <div class="row g-5">
+      <!-- Form -->
+      <div class="col-12 col-lg-6">
+        <form class="contact-form p-4 shadow rounded">
+          <div class="mb-3">
+            <label for="name" class="form-label">Ad Soyad</label>
+            <input type="text" class="form-control" id="name" placeholder="Adınızı giriniz" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">E-posta</label>
+            <input type="email" class="form-control" id="email" placeholder="ornek@mail.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Telefon</label>
+            <input type="text" class="form-control" id="phone" placeholder="+90 5XX XXX XX XX" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Mesajınız</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Mesajınızı yazınız" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-gradient w-100">Gönder</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-12 col-lg-6">
+        <div class="p-4 shadow rounded contact-info">
+          <h5 class="fw-bold mb-3">İletişim Bilgileri</h5>
+          <p><strong>Tel:</strong> <a href="tel:+901234567890">+90 0537 607 7199</a></p>
+          <p><strong>Email:</strong> <a href="mailto:info@sahboya.net">info@sahboya.net</a></p>
+          <p><strong>Adres:</strong>  Şafak, 5043. Sk. NO: 26, 07000 Kepez/Antalya</p>
+          <div class="map mt-4">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3189.4870465705408!2d30.642502600000004!3d36.9265271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c38e3e263697a9%3A0xa572ffe9753b9f7b!2zVFVSQU4gxZ5BSCBCT1lBIEvEsE1ZQSDEsE1BTEFUIExURC7FnlTEsA!5e0!3m2!1str!2str!4v1757064118724!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="site-footer py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-12 col-md-4 text-center text-md-start">
+        <a href="index.html" class="d-flex align-items-center mb-3 footer-logo">
+          <img src="sahboya_logo.png" alt="Şah Boya" class="logo-img me-2" style="width: 100px;">
+          <span class="fw-bold">Şah Boya</span>
+        </a>
+        <p class="text-muted">Şah Boya, yüksek kalite ve uygun fiyatlı boyalarıyla mekanlarınızı renklendirir.</p>
+      </div>
+      <div class="col-12 col-md-4 text-center text-md-start">
+        <h5 class="footer-title mb-3">Hızlı Linkler</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="urunler.html">Ürünler</a></li>
+          <li><a href="boya-hesapla.html">Boya Hesapla</a></li>
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="magazaBul.html">Mağaza Bul / Teklif Al</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-4 text-center text-md-start">
+        <h5 class="footer-title mb-3">İletişim</h5>
+        <p class="text-muted mb-1">Tel: +90 123 456 7890</p>
+        <p class="text-muted mb-3">Email: info@sahboya.net</p>
+        <div class="social-icons d-flex justify-content-center justify-content-md-start gap-3">
+          <a href="#"><img src="ikon_instagram.png" alt="Instagram" class="social-icon"></a>
+          <a href="#"><img src="ikon_facebook.png" alt="Facebook" class="social-icon"></a>
+          <a href="#"><img src="ikon_linkedin.png" alt="LinkedIn" class="social-icon"></a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4 text-muted small">
+      <p>© 2025 Şah Boya. Tüm Hakları Saklıdır.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

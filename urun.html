@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ürün Detay | Şah Boya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <a href="index.html"><img src="sahboya_logo.png" alt="Şah Boya" class="brand-logo"></a>
+      <span class="brand-text">Şah Boya</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav mx-auto align-items-lg-center">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Ana Sayfa</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="urunler.html" role="button" id="productsMenu" data-bs-toggle="dropdown" aria-expanded="false">
+            Ürünler
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="productsMenu">
+             <li><a class="dropdown-item" href="urunler.html?category=all">Tüm Ürünler</a></li>
+            <li><a class="dropdown-item" href="urunler.html?category=ic">İç Cephe</a></li>
+            <li><a class="dropdown-item" href="urunler.html?category=dis">Dış Cephe</a></li>
+            <li><a class="dropdown-item" href="urunler.html?category=astar">Astarlar</a></li>
+            <li><a class="dropdown-item" href="urunler.html?category=izolasyon">İzolasyonlar</a></li>
+
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Boya Hesapla</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="hakkinda.html">Hakkımızda</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="iletisim.html">İletişim</a>
+        </li>
+      </ul>
+
+      <div class="d-flex align-items-center">
+        <a class="btn btn-gradient me-2" href="iletisim.html">Teklif Al</a>
+        <a class="btn btn-outline-secondary" href="magazaBul.html">Mağaza Bul</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+  <main class="container py-5">
+    <div id="productDetail" class="row g-4"></div>
+  </main>
+
+  <!-- mevcut footer burada -->
+    <footer class="site-footer py-5">
+  <div class="container">
+    <div class="row g-4">
+      
+      <!-- Logo + Hakkımızda -->
+      <div class="col-12 col-md-4 text-center text-md-start">
+        <a href="index.html" class="d-flex align-items-center mb-3 footer-logo">
+          <img src="sahboya_logo.png" alt="Şah Boya" class="logo-img me-2" style="width: 100px; text-align: center;">
+          <span class="fw-bold">Şah Boya</span>
+        </a>
+        <p class="text-muted">Şah Boya, yüksek kalite ve uygun fiyatlı boyalarıyla mekanlarınızı renklendirir.</p>
+      </div>
+
+      <!-- Hızlı Linkler -->
+      <div class="col-12 col-md-4 text-center text-md-start">
+        <h5 class="footer-title mb-3">Hızlı Linkler</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Ana Sayfa</a></li>
+          <li><a href="#">Ürünler</a></li>
+          <li><a href="#">Boya Hesapla</a></li>
+          <li><a href="hakkinda.html">Hakkımızda</a></li>
+          <li><a href="#">Mağaza Bul / Teklif Al</a></li>
+        </ul>
+      </div>
+
+      <!-- İletişim + Sosyal -->
+      <div class="col-12 col-md-4 text-center text-md-start">
+        <h5 class="footer-title mb-3">İletişim</h5>
+        <p class="text-muted mb-1">Tel: 0537 607 7199</p>
+        <p class="text-muted mb-3">Email: info@sahboya.net</p>
+        <div class="social-icons d-flex justify-content-center justify-content-md-start gap-3">
+          <a href="#"><img src="ikon_instagram.png" alt="Instagram" class="social-icon"></a>
+          <a href="#"><img src="ikon_facebook.png" alt="Facebook" class="social-icon"></a>
+          <a href="#"><img src="ikon_linkedin.png" alt="LinkedIn" class="social-icon"></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Alt Not -->
+    <div class="text-center mt-4 text-muted small">
+      <p>© 2025 Şah Boya. Tüm Hakları Saklıdır.</p>
+    </div>
+  </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+
+  <script type="module">
+    import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+
+    const SUPABASE_URL = 'https://dpamfspimthzevqmnspe.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRwYW1mc3BpbXRoemV2cW1uc3BlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTcwNjg4NTUsImV4cCI6MjA3MjY0NDg1NX0.i6710Ugj_g6KjKxoukeuLXm4TWmUaijRaTRB-BbbqYQ';
+    const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    function getParam(name){ return new URLSearchParams(location.search).get(name); }
+
+    function section(label, value){
+      if(!value) return '';
+      const isList = /\n/.test(value);
+      const content = isList
+        ? `<ul class="mb-0">${value.split(/\n+/).map(i => `<li>${i.replace(/^[-•]\s*/, '')}</li>`).join('')}</ul>`
+        : `<p class="mb-0">${value}</p>`;
+      return `
+        <div class="col-12">
+          <div class="p-3 border rounded-3 mb-2">
+            <h6 class="fw-bold mb-2">${label}</h6>
+            ${content}
+          </div>
+        </div>`;
+    }
+
+    async function loadDetail(){
+      const slug = getParam('slug');
+      const container = document.getElementById('productDetail');
+      if(!slug){
+        container.innerHTML = '<div class="alert alert-danger">Ürün bulunamadı.</div>';
+        return;
+      }
+
+      try {
+        const { data: p, error } = await supabase
+          .from('products')
+          .select('*')
+          .eq('slug', slug)
+          .single();
+
+        if(error || !p){
+          console.error(error);
+          container.innerHTML = '<div class="alert alert-danger">Ürün bulunamadı.</div>';
+          return;
+        }
+
+        // Görseli güvenli al (getPublicUrl synchronous olarak data döner)
+        let imgUrl = 'placeholder.jpg';
+        if (p.image_path) {
+          const res = supabase.storage.from('product-images').getPublicUrl(p.image_path);
+          imgUrl = res?.data?.publicUrl || imgUrl;
+        }
+
+        const html = `
+          <div class="col-lg-5">
+            <img src="${imgUrl}" alt="${p.name}" class="img-fluid rounded-3 shadow-sm w-100" />
+          </div>
+          <div class="col-lg-7">
+            <h1 class="mb-3">${p.name}</h1>
+            <p class="text-muted">Kategori: ${p.category ? p.category.toUpperCase() : ''}</p>
+            <div class="row g-3">
+              ${section('Tanımı', p.description)}
+              ${section('Özellikler', p.features)}
+              ${section('Uygulanacak Yüzeyler', p.surfaces)}
+              ${section('Uygulama', p.application)}
+              ${section('İnceltme', p.dilution)}
+              ${section('Kuruma Süresi', p.drying_time)}
+              ${section('Dokunma Süresi', p.touch_time)}
+              ${section('İkinci Uygulama', p.second_application)}
+              ${section('Tam Kuruması', p.full_dry)}
+              ${section('Sarfiyat', p.consumption)}
+              ${section('Depolama', p.storage)}
+            </div>
+          </div>
+        `;
+
+        container.innerHTML = html;
+      } catch (err) {
+        console.error(err);
+        container.innerHTML = '<div class="alert alert-danger">Veri alınırken hata oluştu. Konsolu kontrol et.</div>';
+      }
+      
+    }
+
+    loadDetail();
+    const { data, error } = await supabase.from('products').select('*');
+console.log("DATA:", data);
+console.log("ERROR:", error);
+
+
+
+  </script>
+</body>
+</html>

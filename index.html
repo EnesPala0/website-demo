@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Şah Boya</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container ">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <a href="index.html"><img src="sahboya_logo.png" alt="Şah Boya" class="brand-logo"></a>
+      <span class="brand-text">Şah Boya</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav mx-auto align-items-lg-center">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Ana Sayfa</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="urunler.html" role="button" id="productsMenu" data-bs-toggle="dropdown" aria-expanded="false">
+            Ürünler
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="productsMenu">
+            <li><a class="dropdown-item" href="urunler.html?category=all">Tüm Ürünler</a></li>
+            <li><a class="dropdown-item" href="urunler.html?category=ic">İç Cephe</a></li>
+            <li><a class="dropdown-item" href="urunler.html?category=dis">Dış Cephe</a></li>
+            <li><a class="dropdown-item" href="urunler.html?category=astar">Astarlar</a></li>
+            <li><a class="dropdown-item" href="urunler.html?category=izolasyon">İzolasyonlar</a></li>
+
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Boya Hesapla</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="hakkinda.html">Hakkımızda</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="iletisim.html">İletişim</a>
+        </li>
+      </ul>
+
+      <div class="d-flex align-items-center">
+        <a class="btn btn-gradient me-2" href="iletisim.html">Teklif Al</a>
+        <a class="btn btn-outline-secondary" href="magazaBul.html">Mağaza Bul</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="hero d-flex align-items-center">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Sol taraf -->
+      <div class="col-lg-6 text-center text-lg-start">
+        <h1 class="hero-title">
+          Renklerle Evinizi<br>
+          <span class="highlight">Baştan Yaratın</span>
+        </h1>
+        <p class="hero-subtitle">
+          Şah Boya’nın modern ve dayanıklı boya çözümleriyle mekanlarınıza
+          estetik bir dokunuş katın.  
+        </p>
+        <div class="mt-4">
+          <a href="urunler.html" class="btn btn-gradient me-2">Ürünleri Keşfet</a>
+          <a href="#hesaplama" class="btn btn-outline-custom">Boya Hesapla</a>
+        </div>
+      </div>
+
+      <!-- Sağ taraf -->
+      <div class="col-lg-6 text-center mt-5 mt-lg-0">
+        <div class="hero-image-wrapper">
+          <img src="banner.png" alt="Şah Boya" class="hero-img img-fluid">
+          <div class="hero-bg-shape"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="categories py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Ürün Kategorileri</h2>
+      <p class="section-subtitle">İhtiyacınıza uygun boyaları ve ürünleri hemen keşfedin</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- İç Cephe -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="category-card text-center p-4 h-100">
+          <img src="Görseller/pexels-pixabay-271816.jpg" alt="İç Cephe" class="category-icon mb-3 img-fluid mx-auto">
+          <h5 class="fw-bold">İç Cephe</h5>
+          <p class="text-muted">Ev ve iş yerleriniz için kaliteli ve dayanıklı iç cephe boyaları.</p>
+          <a href="urunler.html?category=ic" class="stretched-link" aria-label="İç Cephe İncele"></a>
+          <a href="urunler.html?category=ic" class="btn btn-gradient mt-3">İncele</a>
+        </div>
+      </div>
+
+      <!-- Dış Cephe -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="category-card text-center p-4 h-100">
+          <img src="Görseller/Top 10 Modern Exterior Paint Colors for a Stylish Home in 2025.png" alt="Dış Cephe" class="category-icon mb-3 img-fluid mx-auto">
+          <h5 class="fw-bold">Dış Cephe</h5>
+          <p class="text-muted">Uzun ömürlü dış cephe boyaları ile binalarınızı koruyun.</p>
+          <a href="urunler.html?category=dis" class="stretched-link" aria-label="Dış Cephe İncele"></a>
+          <a href="urunler.html?category=dis" class="btn btn-gradient mt-3">İncele</a>
+        </div>
+      </div>
+
+      <!-- Astarlar & Aksesuar -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="category-card text-center p-4 h-100">
+          <img src="astar.png" alt="Astar ve Aksesuar" class="category-icon mb-3 img-fluid mx-auto">
+          <h5 class="fw-bold">Astarlar</h5>
+          <p class="text-muted">Uygulamalarınızı tamamlayacak astar ürünleri.</p>
+          <a href="urunler.html?category=astar" class="stretched-link" aria-label="Astar İncele"></a>
+          <a href="urunler.html?category=astar" class="btn btn-gradient mt-3">İncele</a>
+        </div>
+      </div>
+
+      <!-- İzolasyon -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="category-card text-center p-4 h-100">
+          <img src="izolasyon.png" alt="İzolasyon" class="category-icon mb-3 img-fluid mx-auto">
+          <h5 class="fw-bold">İzolasyon</h5>
+          <p class="text-muted">Binalarınızı su ve ısıya karşı koruyan izolasyon ürünleri.</p>
+          <a href="urunler.html?category=izolasyon" class="stretched-link" aria-label="İzolasyon İncele"></a>
+           <a href="urunler.html?category=izolasyon" class="btn btn-gradient mt-3">İncele</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="paint-calculator py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Sol: Başlık + Açıklama + Buton -->
+      <div class="col-12 col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
+        <h2 class="section-title mb-3">Boya Hesaplama Aracımız</h2>
+        <p class="section-subtitle mb-4">
+          Odanızın veya binanızın alanını girin, ihtiyacınız olan boya miktarını hızlıca öğrenin.
+        </p>
+        <a href="boya-hesapla.html" class="btn btn-gradient btn-lg">Boya Hesapla</a>
+      </div>
+      
+      <!-- Sağ: Görsel -->
+      <div class="col-12 col-lg-6 text-center">
+        <img src="Görseller/boya hesapla.png" alt="Boya Hesaplama" class="paint-img img-fluid">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="advantages py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Neden Şah Boya?</h2>
+      <p class="section-subtitle">Sizi ve mekanınızı önemseyen kalite ve hizmet anlayışımız.</p>
+    </div>
+
+    <div class="row g-4 text-center">
+      <!-- Yüksek Kalite -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="adv-card p-4 h-100">
+          
+          <h5 class="fw-bold">Yüksek Kalite</h5>
+          <p class="text-muted">Dayanıklı ve uzun ömürlü boya ürünleri ile mekanlarınız her zaman kusursuz.</p>
+        </div>
+      </div>
+
+      <!-- Uygun Fiyat -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="adv-card p-4 h-100">
+          <!--<img src="ikon_fiyat.png" alt="Uygun Fiyat" class="adv-icon mb-3 img-fluid mx-auto">-->
+          <h5 class="fw-bold">Uygun Fiyat</h5>
+          <p class="text-muted">Kaliteden ödün vermeden bütçenize uygun çözümler sunuyoruz.</p>
+        </div>
+      </div>
+
+      <!-- Hızlı Teslimat -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="adv-card p-4 h-100">
+          <h5 class="fw-bold">Hızlı Teslimat</h5>
+          <p class="text-muted">Siparişleriniz en kısa sürede kapınıza ulaşır, zaman kaybı yaşamazsınız.</p>
+        </div>
+      </div>
+
+      <!-- Geniş Bayi Ağı -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="adv-card p-4 h-100">
+          <h5 class="fw-bold">Geniş Bayi Ağı</h5>
+          <p class="text-muted">Türkiye genelinde yaygın bayi ağımızla her zaman yanınızdayız.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hakkımızda Butonu -->
+    <div class="text-center mt-4">
+      <a href="hakkimizda.html" class="btn btn-gradient btn-lg">Hakkımızda</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section py-5">
+  <div class="container text-center">
+    <h2 class="section-title mb-3">Hemen Eyleme Geçin</h2>
+    <p class="section-subtitle mb-4">
+      Size en yakın mağazamızı bulun veya mekanınız için hızlıca teklif alın.
+    </p>
+    <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+      <a href="magazaBul.html" class="btn btn-gradient btn-lg">Mağaza Bul</a>
+      <a href="iletisim.html" class="btn btn-outline-secondary btn-lg">Teklif Al</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer py-5">
+  <div class="container">
+    <div class="row g-4">
+      
+      <!-- Logo + Hakkımızda -->
+      <div class="col-12 col-md-4 text-center text-md-start">
+        <a href="#" class="d-flex align-items-center mb-3 footer-logo">
+          <img src="sahboya_logo.png" alt="Şah Boya" class="logo-img me-2" style="width: 100px; text-align: center;">
+          <span class="fw-bold">Şah Boya</span>
+        </a>
+        <p class="text-muted">Şah Boya, yüksek kalite ve uygun fiyatlı boyalarıyla mekanlarınızı renklendirir.</p>
+      </div>
+
+      <!-- Hızlı Linkler -->
+      <div class="col-12 col-md-4 text-center text-md-start">
+        <h5 class="footer-title mb-3">Hızlı Linkler</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="urunler.html">Ürünler</a></li>
+          <li><a href="#">Boya Hesapla</a></li>
+          <li><a href="hakkinda.html">Hakkımızda</a></li>
+          <li><a href="magazaBul.html">Mağaza Bul / Teklif Al</a></li>
+        </ul>
+      </div>
+
+      <!-- İletişim + Sosyal -->
+      <div class="col-12 col-md-4 text-center text-md-start">
+        <h5 class="footer-title mb-3">İletişim</h5>
+        <p class="text-muted mb-1">Tel: 0537 607 7199</p>
+        <p class="text-muted mb-3">Email: info@sahboya.net</p>
+        <div class="social-icons d-flex justify-content-center justify-content-md-start gap-3">
+          <a href="#"><img src="ikon_instagram.png" alt="Instagram" class="social-icon"></a>
+          <a href="#"><img src="ikon_facebook.png" alt="Facebook" class="social-icon"></a>
+          <a href="#"><img src="ikon_linkedin.png" alt="LinkedIn" class="social-icon"></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Alt Not -->
+    <div class="text-center mt-4 text-muted small">
+      <p>© 2025 Şah Boya. Tüm Hakları Saklıdır.</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Bootstrap JS (Popper + Bootstrap) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+
+<!-- Custom JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
