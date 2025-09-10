@@ -43,7 +43,7 @@ function productCard(p) {
 
   return `
     <div class="product-card mb-4" data-category="${p.category}">
-      <a href="urun.html?slug=${encodeURIComponent(p.slug)}" class="stretched-link-card">
+      <a href="urun.html?slug=${encodeURIComponent(p.slug)}" class="stretched-link">
         <div class="card h-100 position-relative">
           <img src="${imgUrl}" class="card-img-top" alt="${p.name}">
           <div class="card-body d-flex flex-column">
