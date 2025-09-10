@@ -565,3 +565,13 @@ body.products-page .btn-gradient {
     max-width: calc(33.333% - 16px);
   }
 }
+.stretched-link-card {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+.stretched-link-card .btn-gradient {
+  pointer-events: none; /* buton tıklanmaz, sadece sembolik durur */
+}
