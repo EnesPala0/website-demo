@@ -43,19 +43,25 @@ function productCard(p) {
 
   return `
     <div class="col-md-6 col-lg-4 product-card" data-category="${p.category}">
-      <a href="urun.html?slug=${encodeURIComponent(p.slug)}" class="stretched-link">
       <div class="card h-100 position-relative">
         <img src="${imgUrl}" class="card-img-top" alt="${p.name}">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">${p.name}</h5>
-          <p class="card-text">${(p.description || '').slice(0, 120)}${(p.description || '').length > 120 ? '…' : ''}</p>
-           
-           <span class="btn btn-gradient mt-auto">Detay</span>
+          <p class="card-text">
+            ${(p.description || '').slice(0, 120)}${(p.description || '').length > 120 ? '…' : ''}
+          </p>
+
+          <!-- Görünmez link -->
+          <a href="urun.html?slug=${encodeURIComponent(p.slug)}" class="stretched-link"></a>
+
+          <!-- Görsel buton -->
+          <span class="btn btn-gradient mt-auto">Detay</span>
         </div>
-      </div></a>
+      </div>
     </div>
   `;
 }
+
 
 // Ürünleri yükleme fonksiyonu
 async function loadProducts(category = currentCat) {
