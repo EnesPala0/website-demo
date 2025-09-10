@@ -541,3 +541,9 @@ body.products-page .btn-gradient {
   transform: none !important;
 }
 
+.card {
+  position: relative;
+}
+.stretched-link {
+  z-index: 1;
+}

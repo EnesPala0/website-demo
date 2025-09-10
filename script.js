@@ -48,7 +48,8 @@ function productCard(p) {
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">${p.name}</h5>
           <p class="card-text">${(p.description || '').slice(0, 120)}${(p.description || '').length > 120 ? '…' : ''}</p>
-          <a href="urun.html?slug=${encodeURIComponent(p.slug)}" class="stretched-link btn btn-gradient mt-auto">Detay</a>
+           <a href="urun.html?slug=${encodeURIComponent(p.slug)}" class="stretched-link"></a>
+           <span class="btn btn-gradient mt-auto">Detay</span>
         </div>
       </div>
     </div>
