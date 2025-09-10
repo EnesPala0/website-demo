@@ -38,17 +38,18 @@ function updateSidebarActive(cat) {
 // Ürün kartı HTML
 function productCard(p) {
   const imgUrl = p.image_path
-    ? supabase.storage.from('product-images').getPublicUrl(p.image_path).data.publicUrl
+    ? supabase.storage.from('product-images').getPublicUrl(p.image_path)?.data?.publicUrl || 'placeholder.jpg'
     : 'placeholder.jpg';
 
   return `
-    <div class="col-6 col-md-6 col-lg-4 product-card" data-category="${p.category}">
+    <div class="col-6 col-md-6 col-lg-4 product-card mb-4">
       <div class="card h-100 position-relative">
         <img src="${imgUrl}" class="card-img-top" alt="${p.name}">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">${p.name}</h5>
           <p class="card-text">${(p.description || '').slice(0, 120)}${(p.description || '').length > 120 ? '…' : ''}</p>
-          <a href="urun.html?slug=${encodeURIComponent(p.slug)}" class="btn btn-gradient mt-auto w-100 text-center">Detay</a>
+          <a href="urun.html?slug=${encodeURIComponent(p.slug)}" class="stretched-link"></a>
+          <span class="btn btn-gradient mt-auto w-100 text-center">Detay</span>
         </div>
       </div>
     </div>
