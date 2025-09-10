@@ -547,29 +547,21 @@ body.products-page .btn-gradient {
 .stretched-link {
   z-index: 1;
 }
-/* Ürünler container */
+
 #productsContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px; /* ürünler arası boşluk */
+  gap: 16px; /* kartlar arası boşluk */
 }
 
-/* Ürün kartları */
 .product-card {
-  flex: 1 1 calc(50% - 16px); /* mobilde 2’li, gap’i çıkar */
+  flex: 1 1 calc(50% - 16px); /* mobilde 2’li */
   max-width: calc(50% - 16px);
 }
 
 @media (min-width: 768px) {
   .product-card {
     flex: 1 1 calc(33.333% - 16px); /* tablet ve üstü 3’lü */
-    max-width: calc(33.333% - 16px);
-  }
-}
-
-@media (min-width: 992px) {
-  .product-card {
-    flex: 1 1 calc(33.333% - 16px); /* desktop 3’lü */
     max-width: calc(33.333% - 16px);
   }
 }
