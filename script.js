@@ -42,7 +42,7 @@ function productCard(p) {
     : 'placeholder.jpg';
 
   return `
-    <div class="col-md-6 col-lg-4 product-card" data-category="${p.category}">
+    <div class="col-6 col-md-6 col-lg-4 product-card" data-category="${p.category}">
       <div class="card h-100 position-relative">
         <img src="${imgUrl}" class="card-img-top" alt="${p.name}">
         <div class="card-body d-flex flex-column">
