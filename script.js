@@ -43,12 +43,12 @@ function productCard(p) {
 
   return `
     <div class="col-md-6 col-lg-4 product-card" data-category="${p.category}">
-      <div class="card h-100">
+      <div class="card h-100 position-relative">
         <img src="${imgUrl}" class="card-img-top" alt="${p.name}">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">${p.name}</h5>
           <p class="card-text">${(p.description || '').slice(0, 120)}${(p.description || '').length > 120 ? '…' : ''}</p>
-          <a href="urun.html?slug=${encodeURIComponent(p.slug)}" class="btn btn-gradient mt-auto">Detay</a>
+          <a href="urun.html?slug=${encodeURIComponent(p.slug)}" class="stretched-link btn btn-gradient mt-auto">Detay</a>
         </div>
       </div>
     </div>
