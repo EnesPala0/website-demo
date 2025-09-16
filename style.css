@@ -572,3 +572,21 @@ body.products-page .btn-gradient {
     max-width: calc(33.333% - 16px);
   }
 }
+
+#productSearch {
+  border-radius: 30px;
+  padding: 10px 15px;
+  border: 2px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+#productSearch:focus {
+  border-color: #007bff; /* Bootstrap primary rengi */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+  outline: none;
+}
+
+#productSearch::placeholder {
+  color: #999;
+  font-style: italic;
+}
