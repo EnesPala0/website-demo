@@ -1,15 +1,14 @@
-
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
-
+// Supabase client
 const SUPABASE_URL = 'https://dpamfspimthzevqmnspe.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRwYW1mc3BpbXRoemV2cW1uc3BlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTcwNjg4NTUsImV4cCI6MjA3MjY0NDg1NX0.i6710Ugj_g6KjKxoukeuLXm4TWmUaijRaTRB-BbbqYQ';
-const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRwYW1mc3BpbXRoemV2cW1uc3BlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTcwNjg4NTUsImV4cCI6MjA3MjY0NDg1NX0.i6710Ugj_g6KjXoukeuLXm4TWmUaijRaTRB-BbbqYQ';
+const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
+// DOM elemanları
 const productsEl = document.getElementById('productsContainer');
 const productSearch = document.getElementById('productSearch');
 const filterLinks = document.querySelectorAll('.list-group-item[data-category]');
 
-let allProducts = []; // tüm ürünler
+let allProducts = [];
 let currentCat = new URLSearchParams(window.location.search).get('category') || 'all';
 
 // Sidebar aktif class
@@ -17,10 +16,10 @@ function updateSidebarActive(cat) {
   filterLinks.forEach(l => l.classList.toggle('active', l.dataset.category === cat));
 }
 
-// Ürün kartı HTML
+// Ürün kartı
 function productCard(p) {
   const imgUrl = p.image_path
-    ? supabase.storage.from('product-images').getPublicUrl(p.image_path)?.data?.publicUrl || 'placeholder.jpg'
+    ? supabase.storage.from('product-images').getPublicUrl(p.image_path).data.publicUrl || 'placeholder.jpg'
     : 'placeholder.jpg';
 
   return `
@@ -58,7 +57,7 @@ async function loadProducts(category = currentCat) {
   renderProducts(allProducts);
 }
 
-// Ürünleri render et
+// Ürünleri render
 function renderProducts(list) {
   if (!list || list.length === 0) {
     productsEl.innerHTML = `<div class="alert alert-warning">Ürün bulunamadı.</div>`;
@@ -67,7 +66,7 @@ function renderProducts(list) {
   productsEl.innerHTML = list.map(productCard).join('');
 }
 
-// Sidebar kategori tıklamaları
+// Sidebar tıklamaları
 filterLinks.forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
@@ -76,7 +75,7 @@ filterLinks.forEach(link => {
     updateSidebarActive(selectedCat);
     loadProducts(selectedCat);
     window.history.replaceState({}, '', `?category=${selectedCat}`);
-    productSearch.value = ''; // aramayı sıfırla
+    productSearch.value = '';
   });
 });
 
@@ -93,4 +92,3 @@ productSearch.addEventListener('input', e => {
 // İlk yükleme
 updateSidebarActive(currentCat);
 loadProducts(currentCat);
-
