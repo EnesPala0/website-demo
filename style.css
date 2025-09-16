@@ -16,7 +16,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 1030;
   background: #fff;
   min-height: var(--nav-height);
   box-shadow: 0 6px 18px rgba(20,20,20,0.06);

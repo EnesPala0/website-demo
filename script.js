@@ -122,3 +122,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const navbar = document.querySelector(".navbar");
+    if (navbar) {
+      const navHeight = navbar.offsetHeight;
+      document.body.style.paddingTop = navHeight + "px";
+    }
+  });
