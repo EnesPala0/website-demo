@@ -1,4 +1,4 @@
-<script type="module">
+
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 
 const SUPABASE_URL = 'https://dpamfspimthzevqmnspe.supabase.co';
@@ -93,4 +93,4 @@ productSearch.addEventListener('input', e => {
 // İlk yükleme
 updateSidebarActive(currentCat);
 loadProducts(currentCat);
-</script>
+
