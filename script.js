@@ -130,3 +130,44 @@ document.addEventListener("DOMContentLoaded", function() {
       document.body.style.paddingTop = navHeight + "px";
     }
   });
+
+  let allProducts = []; // gelen ürünleri saklamak için
+
+async function loadProducts() {
+  let q = supabase
+    .from('products')
+    .select('id,name,slug,category,image_path,description,order_index')
+    .order('order_index', { ascending: true })
+    .order('name', { ascending: true });
+
+  if (currentCat && currentCat !== 'all') q = q.eq('category', currentCat);
+
+  const { data, error } = await q;
+  if (error) {
+    console.error(error);
+    productsEl.innerHTML = `<div class="alert alert-danger">Ürünler yüklenemedi.</div>`;
+    return;
+  }
+
+  allProducts = data || [];
+  renderProducts(allProducts);
+}
+
+// Ürünleri basan ayrı fonksiyon
+function renderProducts(list) {
+  if (!list || list.length === 0) {
+    productsEl.innerHTML = `<div class="alert alert-warning">Ürün bulunamadı.</div>`;
+    return;
+  }
+  productsEl.innerHTML = list.map(productCard).join('');
+}
+
+// Arama inputunu dinle
+document.getElementById("productSearch")?.addEventListener("input", function (e) {
+  const keyword = e.target.value.toLowerCase();
+  const filtered = allProducts.filter(p =>
+    p.name.toLowerCase().includes(keyword) ||
+    (p.description || "").toLowerCase().includes(keyword)
+  );
+  renderProducts(filtered);
+});
